@@ -371,19 +371,19 @@
 }
 
 .advantage-item.details::before {
-  background-image: url(../images/antenna\ 1.png);
+  background-image: url(../images/antenna\ 1.svg);
 }
 
 .advantage-item.punctuality::before {
-  background-image: url(../images/clock\ 1.png);
+  background-image: url(../images/clock\ 1.svg);
 }
 
 .advantage-item.planning::before {
-  background-image: url(../images/diagram\ 1.png);
+  background-image: url(../images/diagram\ 1.svg);
 }
 
 .advantage-item.technologies::before {
-  background-image: url(../images/astronaut\ 1.png);
+  background-image: url(../images/astronaut\ 1.svg);
 }
 
 /*--------------------- чем мы занимаемся--------------------- */
@@ -406,7 +406,6 @@ h2 .whatwedo-section {
 }
 
 .whatwedo-item {
-  display: block;
   position: relative;
   margin-right: 30px;
   text-decoration: none;
@@ -422,31 +421,22 @@ h2 .whatwedo-section {
   padding-right: 0;
   padding-bottom: 0px;
 }
+
 .whatwedo-list :nth-child(3n) {
   margin-right: 0;
 }
 
 .image-text{
-position: absolute;
-}
-
-.whatwedo-section {
-  /* padding-top: 94px; */
-  padding-bottom: 94px;
-}
-
-.image-text{
-  display: block;
-  bottom: 4px;
-  left: 0;
-  background: rgba(47, 48, 58, 0.8);
-  
-  padding: 27px 82px;
-  margin: 0;
-  min-width: 100%;
-
-
-  font-family: 'Roboto';
+  position: absolute;
+display: block;
+bottom: 0px;
+left:0px;
+background: rgba(47, 48, 58, 0.8);
+color: white;
+padding: 27px 82px;
+margin: 0;
+min-width: 100%;
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
@@ -454,17 +444,17 @@ line-height: 16px;
 text-align: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-color:#ffffff
+
 }
 
-/* .image-text::before{
-  content:"";
-  width: 100px;
-  height: 100px;
-  background-color: teal;
-  color: tomato;
-  z-index: 999;
-} */
+.whatwedo-section {
+  /* padding-top: 94px; */
+  padding-bottom: 94px;
+}
+
+.whatwedo-item img {
+  display: block;
+}
 /*--------------------- НАША КОМАНДА----- ----------------*/
 
 .team-list {
@@ -539,10 +529,19 @@ color:#ffffff
   color: var(--secondary-text-colour);
 }
 
+.soc-pic{
+  margin-right: 10px;
+}
+
+.soc-pic:last-child{
+  margin-right: 0px;
+}
+
 .soc-pics {
   padding-left: 0;
   padding: 0;
   margin: 0;
+  margin-right: 10px;
 
   display: flex;
   align-items: center;
@@ -567,8 +566,14 @@ color:#ffffff
 .sp-button:hover {
   background-color: var(--accent-colourbackground);
 }
+.sp-button:focus {
+  background-color: var(--accent-colourbackground);
+}
 
 .sp-button:hover .sp-button-icon {
+  fill: white;
+}
+.sp-button:focus .sp-button-icon {
   fill: white;
 }
 
@@ -659,10 +664,7 @@ color:#ffffff
 
 /* ---------========-----Портфолио --------========------*/
 
-.portfolio-link {
-  position: relative;
-  border: 1px #eeeeee;
-}
+
 .portfolio-list {
   display: flex;
   justify-content: center;
@@ -721,20 +723,19 @@ color:#ffffff
 
 .portfolio-link {
   text-decoration: none;
+  display: block;
+  border: 1px #eeeeee;
   margin-top: 0;
   margin-bottom: 0;
 }
-.item a {
-  width: 0px;
-  height: 0px;
-}
+
 
 .portfolio-text {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
-
+  margin-top: -4px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -757,11 +758,11 @@ color:#ffffff
   margin-bottom: 30px;
 }
 
-.portfolio-cards .item:hover {
+.portfolio-cards .portfolio-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-cards .item:focus {
+.portfolio-cards .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -787,7 +788,11 @@ color:#ffffff
   width: 25px; */
 }
 .client-image {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    border-radius: 4px;
+  border: 1px solid #afb1b8;
   width: 170px;
   height: 92px;
 }
@@ -805,10 +810,9 @@ color:#ffffff
 }
 
 .client-pic {
-  border-radius: 4px;
-  border: 1px solid #afb1b8;
-  width: 170px;
-  height: 92px;
+
+  width: 106px;
+  height: 60px;
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 16px;
@@ -819,72 +823,15 @@ color:#ffffff
   justify-content: center;
   align-items: center;
 }
-
-.overlay-text{
-position: absolute;
-max-width: 300px;
-}
-
 .client-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/ .port-img {
   display: block;
-}
-.port-img {
-  position: relative;
-  display: block;
-}
-.overlay-text{
-  margin: 0;
-  position: absolute;
-  width: 322px;
-  height: 168px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , -50%);
-  outline: 5px solid tomato;
-  opacity: 0;
-  transition: 500ms opacity linear;
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-/* or 156% */
-
-letter-spacing: 0.03em;
-
-color: #FFFFFF;
-}
-
-.product-thumb::before{
-  display: block;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-.item:hover .overlay-text{
-  opacity: 1;
-
-
-}
-
-.product-thumb{
-
-  position: relative;
-}
-/* .item::after{
-  position: absolute;
-  bottom: 0;
-   width: 100%;
   
-  display: inline-block;
-  content: "";
-  top: 0;
-  width: 100px;
-  height: 100px;
-  background-color:rgba(33, 150, 243, 0.9);
-}  */
+}
 
 .portfolio-cards :nth-child(3n) {
   margin-right: 0;
@@ -901,11 +848,11 @@ color: #FFFFFF;
   margin-bottom: 0;
 }
 
-.portfolio-cards li {
+/* .portfolio-cards li {
   width: 370px;
   margin-right: 30px;
 }
-*/
+*/ */
 
 /*-====================-=-=-= футер-====================-=-=-= */
 
