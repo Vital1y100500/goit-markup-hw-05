@@ -82,7 +82,7 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button data-modal-open class="hero-button" type="button">Заказать услугу</button>
         </div>
       </section>
 
@@ -430,12 +430,23 @@
           </ul>
         </div>
       </section>
+
+      <!--------------------------- Модальное окно------------------------- -->
+
+      <div data-modal class="backdrop is-hidden">
+        <div class="modal">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestias perferendis iusto commodi assumenda praesentium, temporibus sunt enim neque nihil culpa ipsum incidunt fuga inventore? Saepe, deleniti? Quibusdam, saepe veniam.
+</p>
+<button data-modal-close>ЗАКРЫТЬ</button>
+        </div>
+
+
+      </div>
     </main>
     <!------------------------------FOOTER------------------------------->
 
     <footer class="footer">
       <div class="container footer-elements">
-        <!-- <div class="footer-elements"> -->
       <div>
           <address class="footer-links">
             <a class="logo-footer" href="#">
@@ -514,5 +525,6 @@
         </div>
       </div>
     </footer>
-  </body>
+    <script src="./js/modal.js"></script>
+  </body> 
 </html>
