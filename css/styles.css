@@ -754,18 +754,23 @@ h2 .whatwedo-section {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1) ;
+  /* transform: translateY(-50%); */
+
+  transition: opacity 250ms; cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item:hover .product-thumb::before {
   opacity: 1;
+  /* transform: translateY(0%); */
 }
 
 .product-thumb {
   display: block;
   content: "";
+  position: relative;
+}
+
+.product-thumb-center{
   position: relative;
 }
 
@@ -775,9 +780,10 @@ h2 .whatwedo-section {
   margin: 0;
   width: 322px;
   height: 168px;
-  top: 36%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* transform: translateY(-30%); */
 
   font-family: "Roboto";
   font-style: normal;
